@@ -1,10 +1,11 @@
+/* Reset some basic default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #a1dbdd; /* Light blue background */
@@ -12,62 +13,62 @@ body {
     padding: 20px;
 }
 
-
+/* Heading styling */
 h1 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
 }
 
-
+/* Label styling */
 label {
     font-size: 1.2rem;
     margin-right: 10px;
 }
 
-
+/* Input field styling */
 input {
     padding: 8px;
     font-size: 1rem;
-    border: 1px solid #160606; 
+    border: 1px solid #160606; /* Dark red border */
     border-radius: 4px;
     margin-right: 10px;
     width: 200px;
 }
 
-
+/* Button styling */
 button {
     padding: 8px 16px;
     font-size: 1rem;
-    background-color: #1685ec; 
-    color: rgba(255, 255, 255, 0.877); 
+    background-color: #1685ec; /* Blue background */
+    color: rgba(255, 255, 255, 0.877); /* Off-white text */
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
- 
+/* Button hover effect */
 button:hover {
-    background-color: #da470d;
+    background-color: #da470d; /* Orange background on hover */
 }
 
-
+/* Section styling */
 section {
-    background-color: #fff; 
+    background-color: #fff; /* White background */
     padding: 20px;
     margin-top: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-
+/* Section headers styling */
 section h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #1685ec; 
+    color: #1685ec; /* Blue color for section headers */
 }
 
-
+/* Country info and flag image styling */
 #country-info p {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -75,12 +76,12 @@ section h2 {
 }
 
 .flag-img {
-    width: 150px; 
+    width: 150px; /* Flag size */
     height: auto;
     margin-top: 10px;
 }
 
-
+/* Bordering countries list styling */
 ul {
     list-style-type: none;
     padding: 0;
@@ -92,25 +93,24 @@ ul li {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    background-color: #f9f9f9; 
-    border-radius: 4px; 
-    transition: background-color 0.3s ease; 
+    background-color: #f9f9f9; /* Light grey background for list items */
+    border-radius: 4px; /* Rounded corners for list items */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
 ul li:hover {
-    background-color: #d0e4f4; 
+    background-color: #d0e4f4; /* Light blue background on hover */
 }
 
-
+/* Bordering country flag styling */
 ul li img {
-    width: 30px; 
+    width: 30px; /* Larger flag size for bordering countries */
     height: auto;
     margin-right: 10px;
 }
 
-
+/* Additional styling for individual list items */
 ul li span {
     font-weight: bold;
     margin-left: 10px;
 }
-
