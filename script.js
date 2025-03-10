@@ -3,27 +3,22 @@ document.getElementById('submit-btn').addEventListener('click', getCountryInfo);
 function getCountryInfo() {
     const countryName = document.getElementById('country-name').value.trim();
 
-    
     if (!countryName) {
         alert("Please enter a country name.");
         return;
     }
 
-    
     document.getElementById('country-info').innerHTML = '<h2>Country Information</h2>';
     document.getElementById('bordering-countries').innerHTML = '<h2>Bordering Countries</h2><ul></ul>';
 
-    
     fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
         .then(response => response.json())
         .then(data => {
             if (data.status === 404) {
-                
                 alert("Country not found! Please try again.");
                 return;
             }
 
-            
             const country = data[0];
             displayCountryInfo(country);
             displayBorderingCountries(country);
@@ -34,7 +29,6 @@ function getCountryInfo() {
         });
 }
 
-
 function displayCountryInfo(country) {
     const countryInfoSection = document.getElementById('country-info');
     
@@ -42,7 +36,7 @@ function displayCountryInfo(country) {
     const capital = country.capital ? country.capital[0] : 'Not available';
     const population = country.population ? country.population.toLocaleString() : 'Not available';
     const region = country.region ? country.region : 'Not available';
-    const flag = country.flags[0];
+    const flag = country.flags.svg;
 
     countryInfoSection.innerHTML += `
         <p><strong>Country:</strong> ${countryName}</p>
@@ -52,7 +46,6 @@ function displayCountryInfo(country) {
         <p><strong>Flag:</strong><br><img src="${flag}" alt="Flag of ${countryName}" class="flag-img"></p>
     `;
 }
-
 
 function displayBorderingCountries(country) {
     const borderingCountriesSection = document.getElementById('bordering-countries');
@@ -71,7 +64,7 @@ function displayBorderingCountries(country) {
             .then(borderCountryData => {
                 const borderCountry = borderCountryData[0];
                 const borderCountryName = borderCountry.name.common;
-                const borderCountryFlag = borderCountry.flags[0];
+                const borderCountryFlag = borderCountry.flags.svg;
                 const li = document.createElement('li');
                 li.innerHTML = `
                     <img src="${borderCountryFlag}" alt="Flag of ${borderCountryName}" class="border-flag">
@@ -84,4 +77,5 @@ function displayBorderingCountries(country) {
             });
     });
 }
+
 
