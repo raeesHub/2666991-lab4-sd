@@ -78,4 +78,9 @@ function displayBorderingCountries(country) {
     });
 }
 
+window.onload = function() {
+    document.getElementById('country-name').value = '';
+};
+
+
 
