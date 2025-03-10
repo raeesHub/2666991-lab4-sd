@@ -42,7 +42,7 @@ function displayCountryInfo(country) {
     const capital = country.capital ? country.capital[0] : 'Not available';
     const population = country.population ? country.population.toLocaleString() : 'Not available';
     const region = country.region ? country.region : 'Not available';
-    const flag = country.flags.png;
+    const flag = country.flags[0];
 
     countryInfoSection.innerHTML += `
         <p><strong>Country:</strong> ${countryName}</p>
